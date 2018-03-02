@@ -26,6 +26,9 @@ using System.Collections.Generic;
 
 namespace TPLDataflowHelpers
 {
+    /// <summary>
+    /// An IDisposable class that holds multiple IDisposables; used as the return value in PriorityBufferBlock.LinkTo.
+    /// </summary>
     public sealed class DisposableMultiLink : IDisposable
     {
         private readonly IEnumerable<IDisposable> _contents;
